@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Interaction</title>
+</head>
+<body>
+    <h1>WebView Interaction Example</h1>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        // Este script se encargará de asignar la función al botón,
+        // la cual será inyectada desde la app.
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('myButton').onclick = function() {
+                // Este es el lugar donde se llamará la función de la interfaz de JavaScript.
+                Android.showToast('Button clicked!');
+            };
+        });
+    </script>
+</body>
+</html>
